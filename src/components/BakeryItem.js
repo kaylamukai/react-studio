@@ -10,12 +10,11 @@ function BakeryItem(prop) {
     const handleClick = () => {
         console.log(prop.item.name);
         updateCart([...cart, item]);
-        // prop.setTotal(prop.total + item.price);
-        // console.log(prop.total);
     }
 
+    
     return (
-        <div>
+        <div class ="items">
             <img src={item.image}></img>
             <h3>{item.name}</h3>
             <p>{item.description}</p>

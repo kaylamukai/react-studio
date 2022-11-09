@@ -32,19 +32,18 @@ function App() {
     <div className="App">
       <h1>My Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
 
+      <div class="wrapper">
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
         // <p>Bakery Item {index}</p> // replace with BakeryItem component
         <BakeryItem item={item} key={index} cart={cart} updateCart={setCart} total={total} setTotal={setTotal}/>
       ))}
+      </div>
 
-      <div>
+      <div class="cart">
         <h2>Cart</h2>
         {/* TODO: render a list of items in the cart */}
-            <div>
-               <h2>Current count: {}</h2>
-             </div>
             {cart.map((e, i) => <p key={i}>{e.name}</p>)}
-            <h4>{total}</h4>
+            <h4>Total: ${total}</h4>
       </div>
     </div>
   );
